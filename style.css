@@ -9,6 +9,9 @@ body {
     align-items: center;
     justify-content: center;    
     height: 100vh;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVtfxhy68orxAkB_sjgqKTZw3pLYD6uWxzpg&s");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 canvas { 
