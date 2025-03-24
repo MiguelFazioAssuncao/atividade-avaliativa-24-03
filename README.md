@@ -9,6 +9,7 @@ jogo da cobrinha criado para comprovar o conhecimento em javascript onde foi rea
  - Pontuação
  - Colisão
  - Cores personalizadas
+ - Aumentar de tamanho
 
 ### Como executar:
 
