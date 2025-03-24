@@ -28,7 +28,7 @@ git checkout -b main
 - Pontuação máxima é exibida no console sempre que ultrapassada
 - Jogo não finalizado a tempo
 
-#Imagens
+## Imagens
 ![image](https://github.com/user-attachments/assets/f51ff1dd-642e-4b3e-945e-d26352c25511)
 ![image](https://github.com/user-attachments/assets/8b86d4c8-2a58-43dc-b8c9-729c030f34b4)
 ![image](https://github.com/user-attachments/assets/b5d2851a-3f20-4b06-bebc-cb098655e431)
