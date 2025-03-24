@@ -1,9 +1,5 @@
-const canvas = document.getElementById('game')
-
-if (canvas != null) {
-const ctx = canvas.getContext('2d') 
-}
-
+const canvas = document.getElementById('jogoCanvas')
+const ctx = canvas.getContext('2d')
 
 const teclasPressionadas = {
    KeyW: false,
@@ -24,7 +20,7 @@ document.addEventListener('keydown', (e) => {
 
 
 class Entidade {
-   constructor(x, y, largura, altura) {
+   constructor(x, y, largura, altura, cor) {
        this.x = x
        this.y = y
        this.largura = largura
@@ -41,7 +37,11 @@ class Cobra extends Entidade {
    constructor(x, y, largura, altura) {
        super(x, y, largura, altura)
    }
-   atualizar() {
+   desenhar (){
+    ctx.fillStyle = 'green'
+    ctx.fillRect(this.x, this.y, this.largura, this.altura)
+}
+      atualizar() {
        if (teclasPressionadas.KeyW) {
            this.y -= 7
        } else if (teclasPressionadas.KeyS) {
@@ -69,8 +69,13 @@ class Cobra extends Entidade {
 }
 class Comida extends Entidade {
    constructor() {
-       super(Math.random()*canvas.width-10, t-10, 20, 20)
+       super(Math.random()*canvas.width-10,Math.random()*canvas.height -10, 20, 20)
    }
+
+   desenhar (){
+    ctx.fillStyle = 'red'
+    ctx.fillRect(this.x, this.y, this.largura, this.altura)
+}
 }
 
 
