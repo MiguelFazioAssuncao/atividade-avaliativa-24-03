@@ -7,13 +7,11 @@
 body {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;    
     height: 100vh;
 }
 
-canvas {
+canvas { 
     border: 1px solid black;
-    background-color: rgb(112, 146, 42);
-    width: 1200px;
-    height: 500px;
+    background-color: rgb(61, 143, 54);
 }
