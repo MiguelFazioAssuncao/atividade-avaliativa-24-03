@@ -1,5 +1,7 @@
 const canvas = document.getElementById('jogoCanvas')
 const ctx = canvas.getContext('2d')
+let gameOverH1 = document.getElementById('gameOver');
+let gameOver = false;
 
 const teclasPressionadas = {
    KeyW: false,
@@ -16,7 +18,7 @@ document.addEventListener('keydown', (e) => {
    if (teclasPressionadas.hasOwnProperty(e.code)) {
        teclasPressionadas[e.code] = true;
    }
-});
+}); 
 
 
 class Entidade {
@@ -53,6 +55,19 @@ class Cobra extends Entidade {
        }
    }
    verificarColisao(comida){
+
+       if(
+           this.x < 0 ||
+           this.x > canvas.width - this.largura ||
+           this.y < 0 ||
+           this.y > canvas.height - this.altura
+           ){ 
+            gameOverH1.style.opacity = 100;
+            let gameOver = true;
+            setInterval(() => {
+                location.reload();
+            }, 2000);
+        }
        if(
            this.x < comida.x + comida.largura &&
            this.x + this.largura > comida.x &&
