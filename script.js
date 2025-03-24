@@ -82,6 +82,7 @@ class Cobra extends Entidade {
   #houveColisao(comida) {
     comida.x = Math.random() * canvas.width - 10;
     comida.y = Math.random() * canvas.height - 10;
+    this.aumentarTamanhoCobra();
   }
 
   getPontuacao() {
@@ -93,6 +94,10 @@ class Cobra extends Entidade {
     }
 
     console.log("Pontuação máxima: " + pontuacaoMaxima);
+  }
+
+  aumentarTamanhoCobra() {
+    
   }
 }
 class Comida extends Entidade {
